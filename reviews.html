@@ -14,7 +14,6 @@
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="images/Cdot_Logo-min.png" alt="C-DOT Systems" />
-      <span class="nav-logo-text">C-DOT Systems</span>
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -49,73 +48,73 @@
   </div>
 </div>
 
+<!-- UNIFIED TESTIMONIALS SECTION -->
 <section class="section" style="background:var(--light)">
+  <style>
+    .tsc-wrap { position:relative; max-height:740px; overflow:hidden;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+      mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+    }
+    .tsc-grid { display:flex; justify-content:center; gap:24px; }
+    .tsc-col { display:flex; flex-direction:column; gap:24px; }
+    .tsc-col-inner { display:flex; flex-direction:column; gap:24px; animation: tscScroll var(--tsc-dur, 20s) linear infinite; }
+    @keyframes tscScroll { 0%{transform:translateY(0)} 100%{transform:translateY(-50%)} }
+    .tsc-card { padding:32px; border-radius:20px; border:1px solid var(--border); box-shadow:0 8px 24px rgba(10,77,46,.08); max-width:320px; width:320px; background:var(--white); transition:var(--transition); }
+    .tsc-card:hover { box-shadow:0 16px 40px rgba(10,77,46,.14); transform:translateY(-2px); }
+    .tsc-card-text { font-size:.92rem; color:var(--text); line-height:1.7; }
+    .tsc-card-footer { display:flex; align-items:center; gap:12px; margin-top:20px; }
+    .tsc-card-avatar { width:40px; height:40px; border-radius:50%; flex-shrink:0; background:linear-gradient(135deg,var(--accent),var(--sky)); color:#fff; font-weight:700; font-size:1rem; display:flex; align-items:center; justify-content:center; }
+    .tsc-card-name { font-weight:600; font-size:.9rem; color:var(--primary); line-height:1.2; }
+    .tsc-card-role { font-size:.8rem; color:var(--muted); line-height:1.2; }
+    .tsc-col-2 { display:none; }
+    .tsc-col-3 { display:none; }
+    @media(min-width:768px) { .tsc-col-2 { display:flex; } }
+    @media(min-width:1024px) { .tsc-col-3 { display:flex; } }
+  </style>
   <div class="container">
     <div class="text-center" data-aos="fade-up" style="margin-bottom:16px">
       <span class="section-tag">Testimonials</span>
       <h2 class="section-title">Trusted by <span>100+ Clients</span></h2>
       <p class="section-sub">From banking and manufacturing to pharma and education — here's what our clients say.</p>
     </div>
-    <div style="display:flex;justify-content:center;gap:40px;margin:32px 0 52px;text-align:center">
+    <div style="display:flex;justify-content:center;gap:40px;margin:32px 0 48px;text-align:center">
       <div><div style="font-size:3rem;font-weight:900;color:var(--primary);font-family:var(--font-head)">4.9</div><div style="color:var(--gold);font-size:1.2rem">★★★★★</div><div style="font-size:.85rem;color:var(--muted)">Average Rating</div></div>
       <div style="width:1px;background:var(--border)"></div>
       <div><div style="font-size:3rem;font-weight:900;color:var(--primary);font-family:var(--font-head)">100+</div><div style="font-size:.85rem;color:var(--muted);margin-top:8px">Happy Clients</div></div>
       <div style="width:1px;background:var(--border)"></div>
       <div><div style="font-size:3rem;font-weight:900;color:var(--primary);font-family:var(--font-head)">28+</div><div style="font-size:.85rem;color:var(--muted);margin-top:8px">Years of Trust</div></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-
-      <div class="review-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"C-DOT Systems has been our IT infrastructure partner for over a decade. Their expertise in hardware sourcing and support has been invaluable. Response time is excellent and the team always goes the extra mile."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">R</div>
-          <div class="reviewer-info"><div class="name">Rajesh Sharma</div><div class="role">IT Head, Bajaj Auto</div></div>
+    <div class="tsc-wrap">
+      <div class="tsc-grid">
+        <!-- Col 1: Rajesh + Priya -->
+        <div class="tsc-col">
+          <div class="tsc-col-inner" style="--tsc-dur:15s">
+            <div class="tsc-card"><div class="tsc-card-text">"C-DOT Systems has been our IT infrastructure partner for over a decade. Their expertise in hardware sourcing and support has been invaluable. Response time is excellent and the team always goes the extra mile."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">R</div><div><div class="tsc-card-name">Rajesh Sharma</div><div class="tsc-card-role">IT Head, Bajaj Auto</div></div></div></div>
+            <div class="tsc-card"><div class="tsc-card-text">"We migrated our entire server infrastructure to the cloud with C-DOT's guidance. The process was seamless, well-planned and completed ahead of schedule. Highly recommended for cloud migrations."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">P</div><div><div class="tsc-card-name">Priya Mehta</div><div class="tsc-card-role">CTO, Symbiosys Technologies</div></div></div></div>
+            <!-- duplicate for seamless loop -->
+            <div class="tsc-card"><div class="tsc-card-text">"C-DOT Systems has been our IT infrastructure partner for over a decade. Their expertise in hardware sourcing and support has been invaluable. Response time is excellent and the team always goes the extra mile."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">R</div><div><div class="tsc-card-name">Rajesh Sharma</div><div class="tsc-card-role">IT Head, Bajaj Auto</div></div></div></div>
+            <div class="tsc-card"><div class="tsc-card-text">"We migrated our entire server infrastructure to the cloud with C-DOT's guidance. The process was seamless, well-planned and completed ahead of schedule. Highly recommended for cloud migrations."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">P</div><div><div class="tsc-card-name">Priya Mehta</div><div class="tsc-card-role">CTO, Symbiosys Technologies</div></div></div></div>
+          </div>
         </div>
-      </div>
-
-      <div class="review-card" data-aos="fade-up" data-aos-delay="60">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"We migrated our entire server infrastructure to the cloud with C-DOT's guidance. The process was seamless, well-planned and completed ahead of schedule. Highly recommended for cloud migrations."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">P</div>
-          <div class="reviewer-info"><div class="name">Priya Mehta</div><div class="role">CTO, Symbiosys Technologies</div></div>
+        <!-- Col 2: Anand + Suresh -->
+        <div class="tsc-col tsc-col-2">
+          <div class="tsc-col-inner" style="--tsc-dur:19s">
+            <div class="tsc-card"><div class="tsc-card-text">"C-DOT handles our entire branch network across 1450+ locations. Their IMS support is exceptional — 24/7 availability and consistent SLA adherence. A truly reliable partner."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">A</div><div><div class="tsc-card-name">Anand Kulkarni</div><div class="tsc-card-role">IT Manager, LIC</div></div></div></div>
+            <div class="tsc-card"><div class="tsc-card-text">"The enterprise security solutions provided by C-DOT have significantly strengthened our security posture. Their team understands our business and provides tailored solutions."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">S</div><div><div class="tsc-card-name">Suresh Patil</div><div class="tsc-card-role">Director, Cooper Corp</div></div></div></div>
+            <!-- duplicate for seamless loop -->
+            <div class="tsc-card"><div class="tsc-card-text">"C-DOT handles our entire branch network across 1450+ locations. Their IMS support is exceptional — 24/7 availability and consistent SLA adherence. A truly reliable partner."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">A</div><div><div class="tsc-card-name">Anand Kulkarni</div><div class="tsc-card-role">IT Manager, LIC</div></div></div></div>
+            <div class="tsc-card"><div class="tsc-card-text">"The enterprise security solutions provided by C-DOT have significantly strengthened our security posture. Their team understands our business and provides tailored solutions."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">S</div><div><div class="tsc-card-name">Suresh Patil</div><div class="tsc-card-role">Director, Cooper Corp</div></div></div></div>
+          </div>
         </div>
-      </div>
-
-      <div class="review-card" data-aos="fade-up" data-aos-delay="120">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"C-DOT handles our entire branch network across 1450+ locations. Their IMS support is exceptional — 24/7 availability and consistent SLA adherence. A truly reliable partner."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">A</div>
-          <div class="reviewer-info"><div class="name">Anand Kulkarni</div><div class="role">IT Manager, LIC</div></div>
-        </div>
-      </div>
-
-      <div class="review-card" data-aos="fade-up" data-aos-delay="180">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The enterprise security solutions provided by C-DOT have significantly strengthened our security posture. Their team understands our business and provides tailored solutions."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">S</div>
-          <div class="reviewer-info"><div class="name">Suresh Patil</div><div class="role">Director, Cooper Corp</div></div>
-        </div>
-      </div>
-
-      <div class="review-card" data-aos="fade-up" data-aos-delay="240">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"C-DOT's IT manpower division helped us hire 50+ skilled engineers in 3 months. Their screening process is thorough and the quality of candidates is consistently high."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">N</div>
-          <div class="reviewer-info"><div class="name">Neha Joshi</div><div class="role">HR Director, SERUM Institute</div></div>
-        </div>
-      </div>
-
-      <div class="review-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Outstanding network deployment project — 200 nodes across our offices in record time. Professional team, clean execution, and excellent post-deployment support."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">A</div>
-          <div class="reviewer-info"><div class="name">Amit Desai</div><div class="role">CIO, GIC</div></div>
+        <!-- Col 3: Neha + Amit -->
+        <div class="tsc-col tsc-col-3">
+          <div class="tsc-col-inner" style="--tsc-dur:17s">
+            <div class="tsc-card"><div class="tsc-card-text">"C-DOT's IT manpower division helped us hire 50+ skilled engineers in 3 months. Their screening process is thorough and the quality of candidates is consistently high."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">N</div><div><div class="tsc-card-name">Neha Joshi</div><div class="tsc-card-role">HR Director, SERUM Institute</div></div></div></div>
+            <div class="tsc-card"><div class="tsc-card-text">"Outstanding network deployment project — 200 nodes across our offices in record time. Professional team, clean execution, and excellent post-deployment support."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">A</div><div><div class="tsc-card-name">Amit Desai</div><div class="tsc-card-role">CIO, GIC</div></div></div></div>
+            <!-- duplicate for seamless loop -->
+            <div class="tsc-card"><div class="tsc-card-text">"C-DOT's IT manpower division helped us hire 50+ skilled engineers in 3 months. Their screening process is thorough and the quality of candidates is consistently high."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">N</div><div><div class="tsc-card-name">Neha Joshi</div><div class="tsc-card-role">HR Director, SERUM Institute</div></div></div></div>
+            <div class="tsc-card"><div class="tsc-card-text">"Outstanding network deployment project — 200 nodes across our offices in record time. Professional team, clean execution, and excellent post-deployment support."</div><div class="tsc-card-footer"><div class="tsc-card-avatar">A</div><div><div class="tsc-card-name">Amit Desai</div><div class="tsc-card-role">CIO, GIC</div></div></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -138,7 +137,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo"><img src="images/Cdot_Logo-min.png" alt="C-DOT"/><span>C-DOT Systems</span></div>
+        <div class="footer-logo"><img src="images/Cdot_Logo-min.png" alt="C-DOT"/></div>
         <p class="footer-desc">Making IT Simple for 28+ years. Your trusted partner for hardware, networking, cloud &amp; infrastructure across India.</p>
         <div class="footer-social">
           <a class="social-icon" href="https://linkedin.com" target="_blank">in</a>

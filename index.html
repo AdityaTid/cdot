@@ -11,7 +11,7 @@
     /* ── Hero (Home only) ─────────────────────────────────────── */
     #hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 55%, #1565c0 100%);
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 55%, #15803d 100%);
       display: flex; align-items: center;
       position: relative; overflow: hidden; padding-top: 80px;
     }
@@ -23,7 +23,7 @@
     }
     .hero-glow {
       position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: rgba(30,136,229,.15); filter: blur(100px);
+      background: rgba(34,197,94,.15); filter: blur(100px);
       top: -100px; right: -100px; pointer-events: none;
     }
     .hero-content-grid {
@@ -51,7 +51,7 @@
       animation: fadeLeft .9s .15s ease both;
     }
     .hero-title .hl {
-      background: linear-gradient(90deg, #93c5fd, #c4b5fd);
+      background: linear-gradient(90deg, #86efac, #a7f3d0);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .hero-desc {
@@ -102,6 +102,8 @@
       transition:var(--transition);
     }
     .chip:hover { border-color:var(--sky); background:#fff; }
+    /* White logo on transparent hero navbar */
+    #navbar:not(.scrolled) .nav-logo img { filter: brightness(0) invert(1); }
     @media(max-width:768px){
       .hero-content-grid { grid-template-columns:1fr; }
       .hero-visual { display:none; }
@@ -116,8 +118,7 @@
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="images/Cdot_Logo-min.png" alt="C-DOT Systems" style="filter:brightness(0) invert(1);" />
-      <span class="nav-logo-text">C-DOT Systems</span>
+      <img src="images/Cdot_Logo-min.png" alt="C-DOT Systems" />
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -402,7 +403,6 @@
       <div>
         <div class="footer-logo">
           <img src="images/Cdot_Logo-min.png" alt="C-DOT"/>
-          <span>C-DOT Systems</span>
         </div>
         <p class="footer-desc">Making IT Simple for 28+ years. Your trusted partner for hardware, networking, cloud &amp; infrastructure across India.</p>
         <div class="footer-social">
