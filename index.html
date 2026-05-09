@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C-DOT Systems Pvt. Ltd. | Making IT Simple</title>
-  <meta name="description" content="C-DOT Systems — 28+ years of IT hardware, networking, cloud & infrastructure excellence across India." />
+  <meta name="description"
+    content="C-DOT Systems — 28+ years of IT hardware, networking, cloud & infrastructure excellence across India." />
   <link rel="icon" href="images/favicon-min-1.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -12,452 +15,754 @@
     #hero {
       min-height: 100vh;
       background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 55%, #15803d 100%);
-      display: flex; align-items: center;
-      position: relative; overflow: hidden; padding-top: 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
     }
+
     .hero-grid {
-      position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
+
     .hero-glow {
-      position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: rgba(34,197,94,.15); filter: blur(100px);
-      top: -100px; right: -100px; pointer-events: none;
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(34, 197, 94, .15);
+      filter: blur(100px);
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
     }
+
     .hero-content-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 64px; align-items: center; position: relative; z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
     }
+
     .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
-      color: #fff; font-size: .8rem; font-weight: 700;
-      padding: 5px 14px; border-radius: 50px; margin-bottom: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 22px;
       animation: fadeDown .8s ease both;
     }
-    .pulse-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.5);opacity:.6} }
-    @keyframes fadeDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:none} }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
-    @keyframes fadeLeft { from{opacity:0;transform:translateX(-32px)} to{opacity:1;transform:none} }
-    @keyframes fadeRight { from{opacity:0;transform:translateX(32px)} to{opacity:1;transform:none} }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: .6
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-16px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes fadeRight {
+      from {
+        opacity: 0;
+        transform: translateX(32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
     .hero-title {
       font-family: var(--font-head);
       font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 900; color: #fff; line-height: 1.1;
-      margin-bottom: 20px; letter-spacing: -.03em;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -.03em;
       animation: fadeLeft .9s .15s ease both;
     }
+
     .hero-title .hl {
       background: linear-gradient(90deg, #86efac, #a7f3d0);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+
     .hero-desc {
-      font-size: 1.1rem; color: rgba(255,255,255,.8);
-      line-height: 1.75; margin-bottom: 36px;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, .8);
+      line-height: 1.75;
+      margin-bottom: 36px;
       animation: fadeLeft .9s .3s ease both;
     }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeLeft .9s .45s ease both; }
-    .hero-stat-row { display: flex; gap: 32px; margin-top: 48px; animation: fadeLeft .9s .6s ease both; }
-    .h-stat-num { font-family:var(--font-head); font-size:2.2rem; font-weight:900; color:#fff; }
-    .h-stat-label { font-size:.75rem; color:rgba(255,255,255,.55); text-transform:uppercase; letter-spacing:1px; }
-    .hero-visual { animation: fadeRight 1s .2s ease both; }
-    .hero-img-box {
-      border-radius: 24px; overflow: hidden;
-      box-shadow: 0 40px 80px rgba(0,0,0,.4);
-      border: 2px solid rgba(255,255,255,.15); position: relative;
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeLeft .9s .45s ease both;
     }
-    .hero-img-box img { width: 100%; height: 420px; object-fit: cover; }
+
+    .hero-stat-row {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      animation: fadeLeft .9s .6s ease both;
+    }
+
+    .h-stat-num {
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .h-stat-label {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .55);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-visual {
+      animation: fadeRight 1s .2s ease both;
+    }
+
+    .hero-img-box {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, .4);
+      border: 2px solid rgba(255, 255, 255, .15);
+      position: relative;
+    }
+
+    .hero-img-box img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
     .float-card {
-      position: absolute; background: rgba(255,255,255,.12);
-      backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2);
-      border-radius: 16px; padding: 14px 18px; color: #fff;
+      position: absolute;
+      background: rgba(255, 255, 255, .12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 16px;
+      padding: 14px 18px;
+      color: #fff;
       animation: float 4s ease-in-out infinite;
     }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-    .float-card.f1 { bottom: -18px; left: -18px; }
-    .float-card.f2 { top: 18px; right: -18px; animation-delay: -2s; }
-    .float-num { font-size:1.5rem; font-weight:900; }
-    .float-txt { font-size:.72rem; opacity:.8; }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .float-card.f1 {
+      bottom: -18px;
+      left: -18px;
+    }
+
+    .float-card.f2 {
+      top: 18px;
+      right: -18px;
+      animation-delay: -2s;
+    }
+
+    .float-num {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    .float-txt {
+      font-size: .72rem;
+      opacity: .8;
+    }
+
     /* About teaser */
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
-    .about-img-wrap { position:relative; }
-    .about-img-main { border-radius:20px; overflow:hidden; box-shadow:var(--shadow-lg); }
-    .about-img-main img { width:100%; height:440px; object-fit:cover; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-main {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-img-main img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
     .about-badge {
-      position:absolute; bottom:-20px; right:-20px;
-      background:var(--primary); color:#fff; border-radius:16px;
-      padding:20px 24px; text-align:center; box-shadow:var(--shadow);
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
     }
-    .ab-num { font-size:2.8rem; font-weight:900; line-height:1; }
-    .ab-txt { font-size:.78rem; opacity:.8; margin-top:4px; }
-    .feature-chips { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:24px; }
+
+    .ab-num {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .ab-txt {
+      font-size: .78rem;
+      opacity: .8;
+      margin-top: 4px;
+    }
+
+    .feature-chips {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
     .chip {
-      display:flex; gap:8px; align-items:center;
-      background:var(--light); border:1px solid var(--border);
-      border-radius:var(--radius-sm); padding:10px 12px;
-      font-size:.85rem; font-weight:600; color:var(--text);
-      transition:var(--transition);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: var(--transition);
     }
-    .chip:hover { border-color:var(--sky); background:#fff; }
-    /* White logo on transparent hero navbar */
-    #navbar:not(.scrolled) .nav-logo img { filter: brightness(0) invert(1); }
-    @media(max-width:768px){
-      .hero-content-grid { grid-template-columns:1fr; }
-      .hero-visual { display:none; }
-      .about-grid { grid-template-columns:1fr; }
-      .about-badge { display:none; }
+
+    .chip:hover {
+      border-color: var(--sky);
+      background: #fff;
+    }
+
+
+
+    @media(max-width:768px) {
+      .hero-content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-badge {
+        display: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav id="navbar">
-  <div class="container nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="images/Cdot_Logo-min.png" alt="C-DOT Systems" />
-    </a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="nav-actions">
-      <span class="nav-phone">+91-20-25412211</span>
-      <a href="contact.html" class="btn btn-primary btn-sm">Get In Touch</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose">✕</button>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="services.html">Services</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="reviews.html">Reviews</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="container">
-    <div class="hero-content-grid">
-      <div>
-        <div class="hero-badge"><span class="pulse-dot"></span> 28+ Years of IT Excellence</div>
-        <h1 class="hero-title"
-            data-masked-reveal
-            data-stagger="75"
-            data-highlight="IT,Simple">Making <span class="hl">IT Simple</span><br/>Future-Forward<br/>Solutions</h1>
-        <p class="hero-desc">India's most trusted IT infrastructure partner — delivering hardware, networking, cloud &amp; enterprise solutions since 1996. Serving 100+ clients across Pune, Mumbai &amp; beyond.</p>
-        <div class="hero-btns">
-          <a href="services.html" class="btn btn-primary btn-lg">Explore Services →</a>
-          <a href="contact.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff;">Get In Touch</a>
-        </div>
-        <div class="hero-stat-row">
-          <div><div class="h-stat-num">28+</div><div class="h-stat-label">Years</div></div>
-          <div><div class="h-stat-num">1150+</div><div class="h-stat-label">Projects</div></div>
-          <div><div class="h-stat-num">100+</div><div class="h-stat-label">Clients</div></div>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/Cdot_Logo-min.png" alt="C-DOT Systems" />
+      </a>
+      <div class="nav-links">
+        <div class="nav-pill">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-img-box">
-          <img src="images/about-usA-min.jpg" alt="C-DOT Systems Team" />
-          <div class="float-card f1"><div class="float-num">13,500+</div><div class="float-txt">Engineers Deployed</div></div>
-          <div class="float-card f2"><div class="float-num">550+</div><div class="float-txt">Cloud Services</div></div>
+      <div class="nav-actions">
+        <a href="tel:+912025412211" class="nav-phone-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>+91-20-25412211</span>
+        </a>
+        <a href="contact.html" class="nav-cta">Get In Touch <span class="nav-cta-arrow">→</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content-grid">
+        <div>
+          <div class="hero-badge"><span class="pulse-dot"></span> 28+ Years of IT Excellence</div>
+          <h1 class="hero-title" data-masked-reveal data-stagger="75" data-highlight="IT,Simple">Making <span
+              class="hl">IT Simple</span><br />Future-Forward<br />Solutions</h1>
+          <p class="hero-desc">India's most trusted IT infrastructure partner — delivering hardware, networking, cloud
+            &amp; enterprise solutions since 1996. Serving 100+ clients across Pune, Mumbai &amp; beyond.</p>
+          <div class="hero-btns">
+            <a href="services.html" class="btn btn-primary btn-lg">Explore Services →</a>
+            <a href="contact.html" class="btn btn-outline btn-lg"
+              style="border-color:rgba(255,255,255,.5);color:#fff;">Get In Touch</a>
+          </div>
+          <div class="hero-stat-row">
+            <div>
+              <div class="h-stat-num">28+</div>
+              <div class="h-stat-label">Years</div>
+            </div>
+            <div>
+              <div class="h-stat-num">1150+</div>
+              <div class="h-stat-label">Projects</div>
+            </div>
+            <div>
+              <div class="h-stat-num">100+</div>
+              <div class="h-stat-label">Clients</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-img-box">
+            <img src="images/about-usA-min.jpg" alt="C-DOT Systems Team" />
+            <div class="float-card f1">
+              <div class="float-num">13,500+</div>
+              <div class="float-txt">Engineers Deployed</div>
+            </div>
+            <div class="float-card f2">
+              <div class="float-num">550+</div>
+              <div class="float-txt">Cloud Services</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span class="marquee-item">WE ARE HIRING</span>
+      <span class="marquee-item">BDM — Mumbai &amp; Pune</span>
+      <span class="marquee-item">ISR — Mumbai &amp; Pune</span>
+      <span class="marquee-item">Engineers — Desktop &amp; Server</span>
+      <span class="marquee-item">Technical Recruiter — Pune</span>
+      <span class="marquee-item">PREFERRED PARTNER OF AWS</span>
+      <span class="marquee-item">20+ YEARS IT PLACEMENT</span>
+      <span class="marquee-item">WE ARE HIRING</span>
+      <span class="marquee-item">BDM — Mumbai &amp; Pune</span>
+      <span class="marquee-item">ISR — Mumbai &amp; Pune</span>
+      <span class="marquee-item">Engineers — Desktop &amp; Server</span>
+      <span class="marquee-item">Technical Recruiter — Pune</span>
+      <span class="marquee-item">PREFERRED PARTNER OF AWS</span>
+      <span class="marquee-item">20+ YEARS IT PLACEMENT</span>
+    </div>
+  </div>
+
+  <!-- ABOUT TEASER -->
+  <section class="section" style="background:var(--light)">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap" data-aos="fade-right">
+          <div class="about-img-main"><img src="images/about-us-1.jpg" alt="About C-DOT" /></div>
+          <div class="about-badge">
+            <div class="ab-num">28+</div>
+            <div class="ab-txt">Years of Trust</div>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="100">
+          <span class="section-tag">About C-DOT Systems</span>
+          <h2 class="section-title">Your Trusted <span>IT Infrastructure</span> Partner</h2>
+          <p class="section-sub">With 28+ years of legacy in IT hardware, networking, and infrastructure, we've built
+            our reputation by aligning with leading MNCs and ensuring the highest standards of quality and reliability.
+          </p>
+          <p class="section-sub" style="margin-top:12px">Continuing our promise of <strong>'making IT simple'</strong>,
+            we offer an accessible approach to cloud technology, enterprise security, and advanced solutions.</p>
+          <div class="feature-chips">
+            <div class="chip">☁️ Cloud Solutions</div>
+            <div class="chip">🖥️ IT Infrastructure</div>
+            <div class="chip">🔒 Enterprise Security</div>
+            <div class="chip">🌐 Active Networking</div>
+            <div class="chip">👥 IT Manpower</div>
+            <div class="chip">🛠️ IMS &amp; Support</div>
+          </div>
+          <a href="about.html" class="btn btn-outline" style="margin-top:28px">Discover Our Story →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box" data-aos="fade-up">
+          <div class="stat-icon">🏢</div>
+          <div class="stat-num"><span class="counter" data-target="28">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Years in Business</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="80">
+          <div class="stat-icon">📦</div>
+          <div class="stat-num"><span class="counter" data-target="1150">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="160">
+          <div class="stat-icon">🤝</div>
+          <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="240">
+          <div class="stat-icon">👨‍💻</div>
+          <div class="stat-num"><span class="counter" data-target="13500">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Engineers Deployed</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up">
+          <div class="stat-icon">💻</div>
+          <div class="stat-num"><span class="counter" data-target="14800">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">IT Items Installed</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="80">
+          <div class="stat-icon">☁️</div>
+          <div class="stat-num"><span class="counter" data-target="550">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Cloud Services</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="160">
+          <div class="stat-icon">🏦</div>
+          <div class="stat-num"><span class="counter" data-target="1450">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Bank Branches</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="240">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-num"><span class="counter" data-target="70">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Team Members</div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- MARQUEE -->
-<div class="marquee-bar">
-  <div class="marquee-track">
-    <span class="marquee-item">WE ARE HIRING</span>
-    <span class="marquee-item">BDM — Mumbai &amp; Pune</span>
-    <span class="marquee-item">ISR — Mumbai &amp; Pune</span>
-    <span class="marquee-item">Engineers — Desktop &amp; Server</span>
-    <span class="marquee-item">Technical Recruiter — Pune</span>
-    <span class="marquee-item">PREFERRED PARTNER OF AWS</span>
-    <span class="marquee-item">20+ YEARS IT PLACEMENT</span>
-    <span class="marquee-item">WE ARE HIRING</span>
-    <span class="marquee-item">BDM — Mumbai &amp; Pune</span>
-    <span class="marquee-item">ISR — Mumbai &amp; Pune</span>
-    <span class="marquee-item">Engineers — Desktop &amp; Server</span>
-    <span class="marquee-item">Technical Recruiter — Pune</span>
-    <span class="marquee-item">PREFERRED PARTNER OF AWS</span>
-    <span class="marquee-item">20+ YEARS IT PLACEMENT</span>
-  </div>
-</div>
-
-<!-- ABOUT TEASER -->
-<section class="section" style="background:var(--light)">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img-wrap" data-aos="fade-right">
-        <div class="about-img-main"><img src="images/about-us-1.jpg" alt="About C-DOT" /></div>
-        <div class="about-badge"><div class="ab-num">28+</div><div class="ab-txt">Years of Trust</div></div>
+  <!-- SERVICES OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" style="margin-bottom:52px">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Comprehensive <span>IT Solutions</span></h2>
+        <p class="section-sub">End-to-end technology services — from servers and networking to cloud and enterprise
+          security.</p>
       </div>
-      <div data-aos="fade-left" data-aos-delay="100">
-        <span class="section-tag">About C-DOT Systems</span>
-        <h2 class="section-title">Your Trusted <span>IT Infrastructure</span> Partner</h2>
-        <p class="section-sub">With 28+ years of legacy in IT hardware, networking, and infrastructure, we've built our reputation by aligning with leading MNCs and ensuring the highest standards of quality and reliability.</p>
-        <p class="section-sub" style="margin-top:12px">Continuing our promise of <strong>'making IT simple'</strong>, we offer an accessible approach to cloud technology, enterprise security, and advanced solutions.</p>
-        <div class="feature-chips">
-          <div class="chip">☁️ Cloud Solutions</div>
-          <div class="chip">🖥️ IT Infrastructure</div>
-          <div class="chip">🔒 Enterprise Security</div>
-          <div class="chip">🌐 Active Networking</div>
-          <div class="chip">👥 IT Manpower</div>
-          <div class="chip">🛠️ IMS &amp; Support</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap"><img src="images/15-server-rack.gif" alt="Servers" /></div>
+          <h3>Servers &amp; Storage</h3>
+          <p>IBM Unix, Mainframe, Intel/AMD platforms with expert sizing, configuration &amp; post-sales support.</p>
+          <a href="services.html#servers" class="learn-more">Learn more →</a>
         </div>
-        <a href="about.html" class="btn btn-outline" style="margin-top:28px">Discover Our Story →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-box" data-aos="fade-up"><div class="stat-icon">🏢</div><div class="stat-num"><span class="counter" data-target="28">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Years in Business</div></div>
-      <div class="stat-box" data-aos="fade-up" data-aos-delay="80"><div class="stat-icon">📦</div><div class="stat-num"><span class="counter" data-target="1150">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Projects Delivered</div></div>
-      <div class="stat-box" data-aos="fade-up" data-aos-delay="160"><div class="stat-icon">🤝</div><div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Happy Clients</div></div>
-      <div class="stat-box" data-aos="fade-up" data-aos-delay="240"><div class="stat-icon">👨‍💻</div><div class="stat-num"><span class="counter" data-target="13500">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Engineers Deployed</div></div>
-      <div class="stat-box" data-aos="fade-up"><div class="stat-icon">💻</div><div class="stat-num"><span class="counter" data-target="14800">0</span><span class="stat-suffix">+</span></div><div class="stat-label">IT Items Installed</div></div>
-      <div class="stat-box" data-aos="fade-up" data-aos-delay="80"><div class="stat-icon">☁️</div><div class="stat-num"><span class="counter" data-target="550">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Cloud Services</div></div>
-      <div class="stat-box" data-aos="fade-up" data-aos-delay="160"><div class="stat-icon">🏦</div><div class="stat-num"><span class="counter" data-target="1450">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Bank Branches</div></div>
-      <div class="stat-box" data-aos="fade-up" data-aos-delay="240"><div class="stat-icon">🌍</div><div class="stat-num"><span class="counter" data-target="70">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Team Members</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- SERVICES OVERVIEW -->
-<section class="section">
-  <div class="container">
-    <div class="text-center" data-aos="fade-up" style="margin-bottom:52px">
-      <span class="section-tag">What We Offer</span>
-      <h2 class="section-title">Comprehensive <span>IT Solutions</span></h2>
-      <p class="section-sub">End-to-end technology services — from servers and networking to cloud and enterprise security.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="service-icon-wrap"><img src="images/15-server-rack.gif" alt="Servers"/></div>
-        <h3>Servers &amp; Storage</h3>
-        <p>IBM Unix, Mainframe, Intel/AMD platforms with expert sizing, configuration &amp; post-sales support.</p>
-        <a href="services.html#servers" class="learn-more">Learn more →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
-        <div class="service-icon-wrap"><img src="images/19-cloud-network.gif" alt="Cloud"/></div>
-        <h3>Cloud Computing</h3>
-        <p>Hybrid &amp; multi-cloud strategy, 550+ cloud services. Preferred AWS partner — making cloud simple.</p>
-        <a href="services.html#cloud" class="learn-more">Learn more →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
-        <div class="service-icon-wrap"><img src="images/38-Cloud-protection.gif" alt="Security"/></div>
-        <h3>Enterprise Security</h3>
-        <p>Endpoint protection, DLP, firewalls, intrusion prevention, CCTV &amp; access control.</p>
-        <a href="services.html#security" class="learn-more">Learn more →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="service-icon-wrap"><img src="images/02-Work.gif" alt="VDI"/></div>
-        <h3>Virtual Desktop (VDI)</h3>
-        <p>Centralised, secure desktop access from any location for distributed enterprise teams.</p>
-        <a href="services.html#vdi" class="learn-more">Learn more →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
-        <div class="service-icon-wrap"><img src="images/02-Data-Cloud.gif" alt="Networking"/></div>
-        <h3>Active Networking</h3>
-        <p>End-to-end network design, deployment &amp; management. Routers, switches, wireless, SD-WAN.</p>
-        <a href="services.html#networking" class="learn-more">Learn more →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
-        <div class="service-icon-wrap"><img src="images/04-Worldwide.gif" alt="Manpower"/></div>
-        <h3>IT Manpower</h3>
-        <p>20+ years IT staffing for leading MNCs across India, UK, Canada &amp; US. 13,500+ placed.</p>
-        <a href="services.html#manpower" class="learn-more">Learn more →</a>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top:40px" data-aos="fade-up">
-      <a href="services.html" class="btn btn-primary">View All Services →</a>
-    </div>
-  </div>
-</section>
-
-<!-- TECH PARTNERS -->
-<section class="section-sm" style="background:var(--light)">
-  <div class="container">
-    <div class="text-center" data-aos="fade-up" style="margin-bottom:36px">
-      <span class="section-tag">Technology Alliances</span>
-      <h2 class="section-title">Our Technology <span>Partners</span></h2>
-    </div>
-  </div>
-  <div class="logo-carousel-wrap on-light" data-aos="fade-up">
-    <div class="logo-track">
-      <div class="logo-item"><img src="images/IBM.png" alt="IBM"/></div>
-      <div class="logo-item"><img src="images/HP.png" alt="HP"/></div>
-      <div class="logo-item"><img src="images/Hewlett-Packard-Enterprise.png" alt="HPE"/></div>
-      <div class="logo-item"><img src="images/HPE_ARUBA-1.png" alt="Aruba"/></div>
-      <div class="logo-item"><img src="images/dell.png" alt="Dell"/></div>
-      <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco"/></div>
-      <div class="logo-item"><img src="images/Microsoft.png" alt="Microsoft"/></div>
-      <div class="logo-item"><img src="images/Azure-1.png" alt="Azure"/></div>
-      <div class="logo-item"><img src="images/aws-1.png" alt="AWS"/></div>
-      <div class="logo-item"><img src="images/VMWARE-1.png" alt="VMware"/></div>
-      <div class="logo-item"><img src="images/Nutanix.png" alt="Nutanix"/></div>
-      <div class="logo-item"><img src="images/VEEAM-1.png" alt="Veeam"/></div>
-      <div class="logo-item"><img src="images/Sophos.png" alt="Sophos"/></div>
-      <div class="logo-item"><img src="images/fortinet-1.png" alt="Fortinet"/></div>
-      <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco"/></div>
-      <!-- duplicate -->
-      <div class="logo-item"><img src="images/IBM.png" alt="IBM"/></div>
-      <div class="logo-item"><img src="images/HP.png" alt="HP"/></div>
-      <div class="logo-item"><img src="images/Hewlett-Packard-Enterprise.png" alt="HPE"/></div>
-      <div class="logo-item"><img src="images/HPE_ARUBA-1.png" alt="Aruba"/></div>
-      <div class="logo-item"><img src="images/dell.png" alt="Dell"/></div>
-      <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco"/></div>
-      <div class="logo-item"><img src="images/Microsoft.png" alt="Microsoft"/></div>
-      <div class="logo-item"><img src="images/Azure-1.png" alt="Azure"/></div>
-      <div class="logo-item"><img src="images/aws-1.png" alt="AWS"/></div>
-      <div class="logo-item"><img src="images/VMWARE-1.png" alt="VMware"/></div>
-      <div class="logo-item"><img src="images/Nutanix.png" alt="Nutanix"/></div>
-      <div class="logo-item"><img src="images/VEEAM-1.png" alt="Veeam"/></div>
-      <div class="logo-item"><img src="images/Sophos.png" alt="Sophos"/></div>
-      <div class="logo-item"><img src="images/fortinet-1.png" alt="Fortinet"/></div>
-      <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco"/></div>
-    </div>
-  </div>
-</section>
-
-<!-- CLIENTS -->
-<section class="section-sm">
-  <div class="container">
-    <div class="text-center" data-aos="fade-up" style="margin-bottom:36px">
-      <span class="section-tag">Our Clients</span>
-      <h2 class="section-title">Trusted by <span>Industry Leaders</span></h2>
-    </div>
-  </div>
-  <div class="logo-carousel-wrap" data-aos="fade-up">
-    <div class="logo-track" style="animation-direction:reverse">
-      <div class="logo-item"><img src="images/bajaj.png" alt="Bajaj"/></div>
-      <div class="logo-item"><img src="images/LIC.png" alt="LIC"/></div>
-      <div class="logo-item"><img src="images/GIC.png" alt="GIC"/></div>
-      <div class="logo-item"><img src="images/Hasti-Bank-Logo.png" alt="Hasti Bank"/></div>
-      <div class="logo-item"><img src="images/tata-aig.png" alt="Tata AIG"/></div>
-      <div class="logo-item"><img src="images/Symbiosys.png" alt="Symbiosys"/></div>
-      <div class="logo-item"><img src="images/Cooper-Corp.png" alt="Cooper Corp"/></div>
-      <div class="logo-item"><img src="images/Webasto.png" alt="Webasto"/></div>
-      <div class="logo-item"><img src="images/SERUM-inst.png" alt="Serum Institute"/></div>
-      <div class="logo-item"><img src="images/kirloskar-1.png" alt="Kirloskar"/></div>
-      <div class="logo-item"><img src="images/MECC-ALTE.png" alt="MECC ALTE"/></div>
-      <div class="logo-item"><img src="images/EagleBurgmann.png" alt="EagleBurgmann"/></div>
-      <!-- duplicate -->
-      <div class="logo-item"><img src="images/bajaj.png" alt="Bajaj"/></div>
-      <div class="logo-item"><img src="images/LIC.png" alt="LIC"/></div>
-      <div class="logo-item"><img src="images/GIC.png" alt="GIC"/></div>
-      <div class="logo-item"><img src="images/Hasti-Bank-Logo.png" alt="Hasti Bank"/></div>
-      <div class="logo-item"><img src="images/tata-aig.png" alt="Tata AIG"/></div>
-      <div class="logo-item"><img src="images/Symbiosys.png" alt="Symbiosys"/></div>
-      <div class="logo-item"><img src="images/Cooper-Corp.png" alt="Cooper Corp"/></div>
-      <div class="logo-item"><img src="images/Webasto.png" alt="Webasto"/></div>
-      <div class="logo-item"><img src="images/SERUM-inst.png" alt="Serum Institute"/></div>
-      <div class="logo-item"><img src="images/kirloskar-1.png" alt="Kirloskar"/></div>
-      <div class="logo-item"><img src="images/MECC-ALTE.png" alt="MECC ALTE"/></div>
-      <div class="logo-item"><img src="images/EagleBurgmann.png" alt="EagleBurgmann"/></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<div class="cta-banner">
-  <div class="container cta-inner" data-aos="fade-up">
-    <div class="cta-text">
-      <h2>Ready to Simplify Your IT?</h2>
-      <p>Talk to our experts today and discover how C-DOT Systems can transform your technology infrastructure.</p>
-    </div>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-white btn-lg">Get a Free Consultation</a>
-      <a href="tel:+912025412211" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff;">📞 Call Us Now</a>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">
-          <img src="images/Cdot_Logo-min.png" alt="C-DOT"/>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="service-icon-wrap"><img src="images/19-cloud-network.gif" alt="Cloud" /></div>
+          <h3>Cloud Computing</h3>
+          <p>Hybrid &amp; multi-cloud strategy, 550+ cloud services. Preferred AWS partner — making cloud simple.</p>
+          <a href="services.html#cloud" class="learn-more">Learn more →</a>
         </div>
-        <p class="footer-desc">Making IT Simple for 28+ years. Your trusted partner for hardware, networking, cloud &amp; infrastructure across India.</p>
-        <div class="footer-social">
-          <a class="social-icon" href="https://linkedin.com" target="_blank">in</a>
-          <a class="social-icon" href="mailto:admin@cdotsystems.com">✉</a>
-          <a class="social-icon" href="tel:+912025412211">📞</a>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="service-icon-wrap"><img src="images/38-Cloud-protection.gif" alt="Security" /></div>
+          <h3>Enterprise Security</h3>
+          <p>Endpoint protection, DLP, firewalls, intrusion prevention, CCTV &amp; access control.</p>
+          <a href="services.html#security" class="learn-more">Learn more →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap"><img src="images/02-Work.gif" alt="VDI" /></div>
+          <h3>Virtual Desktop (VDI)</h3>
+          <p>Centralised, secure desktop access from any location for distributed enterprise teams.</p>
+          <a href="services.html#vdi" class="learn-more">Learn more →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="service-icon-wrap"><img src="images/02-Data-Cloud.gif" alt="Networking" /></div>
+          <h3>Active Networking</h3>
+          <p>End-to-end network design, deployment &amp; management. Routers, switches, wireless, SD-WAN.</p>
+          <a href="services.html#networking" class="learn-more">Learn more →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="service-icon-wrap"><img src="images/04-Worldwide.gif" alt="Manpower" /></div>
+          <h3>IT Manpower</h3>
+          <p>20+ years IT staffing for leading MNCs across India, UK, Canada &amp; US. 13,500+ placed.</p>
+          <a href="services.html#manpower" class="learn-more">Learn more →</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Servers &amp; Storage</a></li>
-          <li><a href="services.html">Cloud Computing</a></li>
-          <li><a href="services.html">Enterprise Security</a></li>
-          <li><a href="services.html">Virtual Desktop</a></li>
-          <li><a href="services.html">Active Networking</a></li>
-          <li><a href="services.html">IT Manpower</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+912025412211">+91-20-25412211</a></li>
-          <li><a href="tel:+912266971382">+91-22-6697-1382</a></li>
-          <li><a href="mailto:admin@cdotsystems.com">admin@cdotsystems.com</a></li>
-          <li style="opacity:.5;font-size:.82rem;margin-top:6px">41/5 Chinar Apts, Erandwane, Pune – 411004</li>
-        </ul>
+      <div class="text-center" style="margin-top:40px" data-aos="fade-up">
+        <a href="services.html" class="btn btn-primary">View All Services →</a>
       </div>
     </div>
-    <hr class="footer-divider"/>
-    <div class="footer-bottom">
-      <span>© 2024 C-DOT Systems Pvt. Ltd. All rights reserved.</span>
-      <span>Pune &amp; Mumbai, India</span>
+  </section>
+
+  <!-- TECH PARTNERS -->
+  <section class="section-sm" style="background:var(--light)">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" style="margin-bottom:36px">
+        <span class="section-tag">Technology Alliances</span>
+        <h2 class="section-title">Our Technology <span>Partners</span></h2>
+      </div>
+    </div>
+    <div class="logo-carousel-wrap on-light" data-aos="fade-up">
+      <div class="logo-track">
+        <div class="logo-item"><img src="images/IBM.png" alt="IBM" /></div>
+        <div class="logo-item"><img src="images/HP.png" alt="HP" /></div>
+        <div class="logo-item"><img src="images/Hewlett-Packard-Enterprise.png" alt="HPE" /></div>
+        <div class="logo-item"><img src="images/HPE_ARUBA-1.png" alt="Aruba" /></div>
+        <div class="logo-item"><img src="images/dell.png" alt="Dell" /></div>
+        <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco" /></div>
+        <div class="logo-item"><img src="images/Microsoft.png" alt="Microsoft" /></div>
+        <div class="logo-item"><img src="images/Azure-1.png" alt="Azure" /></div>
+        <div class="logo-item"><img src="images/aws-1.png" alt="AWS" /></div>
+        <div class="logo-item"><img src="images/VMWARE-1.png" alt="VMware" /></div>
+        <div class="logo-item"><img src="images/Nutanix.png" alt="Nutanix" /></div>
+        <div class="logo-item"><img src="images/VEEAM-1.png" alt="Veeam" /></div>
+        <div class="logo-item"><img src="images/Sophos.png" alt="Sophos" /></div>
+        <div class="logo-item"><img src="images/fortinet-1.png" alt="Fortinet" /></div>
+        <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco" /></div>
+        <!-- duplicate -->
+        <div class="logo-item"><img src="images/IBM.png" alt="IBM" /></div>
+        <div class="logo-item"><img src="images/HP.png" alt="HP" /></div>
+        <div class="logo-item"><img src="images/Hewlett-Packard-Enterprise.png" alt="HPE" /></div>
+        <div class="logo-item"><img src="images/HPE_ARUBA-1.png" alt="Aruba" /></div>
+        <div class="logo-item"><img src="images/dell.png" alt="Dell" /></div>
+        <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco" /></div>
+        <div class="logo-item"><img src="images/Microsoft.png" alt="Microsoft" /></div>
+        <div class="logo-item"><img src="images/Azure-1.png" alt="Azure" /></div>
+        <div class="logo-item"><img src="images/aws-1.png" alt="AWS" /></div>
+        <div class="logo-item"><img src="images/VMWARE-1.png" alt="VMware" /></div>
+        <div class="logo-item"><img src="images/Nutanix.png" alt="Nutanix" /></div>
+        <div class="logo-item"><img src="images/VEEAM-1.png" alt="Veeam" /></div>
+        <div class="logo-item"><img src="images/Sophos.png" alt="Sophos" /></div>
+        <div class="logo-item"><img src="images/fortinet-1.png" alt="Fortinet" /></div>
+        <div class="logo-item"><img src="images/Cisco-1.png" alt="Cisco" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up" style="margin-bottom:36px">
+        <span class="section-tag">Our Clients</span>
+        <h2 class="section-title">Trusted by <span>Industry Leaders</span></h2>
+      </div>
+    </div>
+    <div class="logo-carousel-wrap" data-aos="fade-up">
+      <div class="logo-track" style="animation-direction:reverse">
+        <div class="logo-item"><img src="images/bajaj.png" alt="Bajaj" /></div>
+        <div class="logo-item"><img src="images/LIC.png" alt="LIC" /></div>
+        <div class="logo-item"><img src="images/GIC.png" alt="GIC" /></div>
+        <div class="logo-item"><img src="images/Hasti-Bank-Logo.png" alt="Hasti Bank" /></div>
+        <div class="logo-item"><img src="images/tata-aig.png" alt="Tata AIG" /></div>
+        <div class="logo-item"><img src="images/Symbiosys.png" alt="Symbiosys" /></div>
+        <div class="logo-item"><img src="images/Cooper-Corp.png" alt="Cooper Corp" /></div>
+        <div class="logo-item"><img src="images/Webasto.png" alt="Webasto" /></div>
+        <div class="logo-item"><img src="images/SERUM-inst.png" alt="Serum Institute" /></div>
+        <div class="logo-item"><img src="images/kirloskar-1.png" alt="Kirloskar" /></div>
+        <div class="logo-item"><img src="images/MECC-ALTE.png" alt="MECC ALTE" /></div>
+        <div class="logo-item"><img src="images/EagleBurgmann.png" alt="EagleBurgmann" /></div>
+        <!-- duplicate -->
+        <div class="logo-item"><img src="images/bajaj.png" alt="Bajaj" /></div>
+        <div class="logo-item"><img src="images/LIC.png" alt="LIC" /></div>
+        <div class="logo-item"><img src="images/GIC.png" alt="GIC" /></div>
+        <div class="logo-item"><img src="images/Hasti-Bank-Logo.png" alt="Hasti Bank" /></div>
+        <div class="logo-item"><img src="images/tata-aig.png" alt="Tata AIG" /></div>
+        <div class="logo-item"><img src="images/Symbiosys.png" alt="Symbiosys" /></div>
+        <div class="logo-item"><img src="images/Cooper-Corp.png" alt="Cooper Corp" /></div>
+        <div class="logo-item"><img src="images/Webasto.png" alt="Webasto" /></div>
+        <div class="logo-item"><img src="images/SERUM-inst.png" alt="Serum Institute" /></div>
+        <div class="logo-item"><img src="images/kirloskar-1.png" alt="Kirloskar" /></div>
+        <div class="logo-item"><img src="images/MECC-ALTE.png" alt="MECC ALTE" /></div>
+        <div class="logo-item"><img src="images/EagleBurgmann.png" alt="EagleBurgmann" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="container cta-inner" data-aos="fade-up">
+      <div class="cta-text">
+        <h2>Ready to Simplify Your IT?</h2>
+        <p>Talk to our experts today and discover how C-DOT Systems can transform your technology infrastructure.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-white btn-lg">Get a Free Consultation</a>
+        <a href="tel:+912025412211" class="btn btn-outline btn-lg"
+          style="border-color:rgba(255,255,255,.5);color:#fff;">📞 Call Us Now</a>
+      </div>
     </div>
   </div>
-</footer>
 
-<button id="scrollTop" title="Back to top">↑</button>
-<div class="lightbox" id="lightbox">
-  <button class="lb-close" id="lbClose">✕</button>
-  <button class="lb-nav lb-prev" id="lbPrev">‹</button>
-  <img id="lbImg" src="" alt=""/>
-  <button class="lb-nav lb-next" id="lbNext">›</button>
-</div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="images/Cdot_Logo-min.png" alt="C-DOT" />
+          </div>
+          <p class="footer-desc">Making IT Simple for 28+ years. Your trusted partner for hardware, networking, cloud
+            &amp; infrastructure across India.</p>
+          <div class="footer-social">
+            <a class="social-icon" href="https://linkedin.com" target="_blank">in</a>
+            <a class="social-icon" href="mailto:admin@cdotsystems.com">✉</a>
+            <a class="social-icon" href="tel:+912025412211">📞</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Servers &amp; Storage</a></li>
+            <li><a href="services.html">Cloud Computing</a></li>
+            <li><a href="services.html">Enterprise Security</a></li>
+            <li><a href="services.html">Virtual Desktop</a></li>
+            <li><a href="services.html">Active Networking</a></li>
+            <li><a href="services.html">IT Manpower</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+912025412211">+91-20-25412211</a></li>
+            <li><a href="tel:+912266971382">+91-22-6697-1382</a></li>
+            <li><a href="mailto:admin@cdotsystems.com">admin@cdotsystems.com</a></li>
+            <li style="opacity:.5;font-size:.82rem;margin-top:6px">41/5 Chinar Apts, Erandwane, Pune – 411004</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <span>© 2024 C-DOT Systems Pvt. Ltd. All rights reserved.</span>
+        <span>Pune &amp; Mumbai, India</span>
+      </div>
+    </div>
+  </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="assets/js/main.js"></script>
+  <button id="scrollTop" title="Back to top">↑</button>
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+    <img id="lbImg" src="" alt="" />
+    <button class="lb-nav lb-next" id="lbNext">›</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
